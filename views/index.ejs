@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findme Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b44c66f5c4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="./pics/findmewhitelogo.png" class="logo">
+            <ul>
+                <li><img src="./pics/notification.png"></li>
+                <li><img src="./pics/inbox.png"></li>
+                <li><img src="./pics/video.png"></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="./pics/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="./pics/profile-pic.png" alt="">
+            </div>
+        </div>
+        <!--Settings Menu-->
+        <div class="settings-menu">
+            <div id="dark-btn">
+                <span></span>
+            </div>
+
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="./pics/profile-pic.png">
+                    <div>
+                        <p>Hakan Yalçınkaya</p>
+                        <a href="./profile">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="user-profile">
+                    <img src="./pics/feedback.png">
+                    <div>
+                        <p>Give Feedback</p>
+                        <a href="#">Help us to improve the new design</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="settings-links">
+                    <img src="./pics/setting.png" class="settings-icon">
+                    <a href="#">Settings & Privacy <img src="./pics/arrow.png" width="10px"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="./pics/help.png" class="settings-icon">
+                    <a href="#">Help & Support <img src="./pics/arrow.png" width="10px"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="./pics/display.png" class="settings-icon">
+                    <a href="#">Display & Accessibility <img src="./pics/arrow.png" width="10px"></a>
+                </div>
+                <div class="settings-links">
+                    <form action="/logout?_method=DELETE" method="POST" class="settings-links">
+                        <!--form sonradan eklendi-->
+                        <img src="./pics/logout.png" class="settings-icon">
+                        <button class="logoutbtn" type="submit">Logout<img src="./pics/arrow.png" width="10px"></button>
+                    </form>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </nav>
+    <div class="container">
+        <!--left sidebar-->
+        <div class="left-sidebar">
+            <div class="imp-links">
+                <a href="#"><img src="./pics/news.png">Latest News</a>
+                <a href="#"><img src="./pics/friends.png">Friends</a>
+                <a href="#"><img src="./pics/group.png">Group</a>
+                <a href="#"><img src="./pics/marketplace.png">Marketplace</a>
+                <a href="#"><img src="./pics/watch.png">Watch</a>
+                <a href="#">See More</a>
+            </div>
+            <div class="shortcut-links">
+                <p>Your Shortcuts</p>
+                <a href="#"><img src="./pics/shortcut-1.png">Web Developers</a>
+                <a href="#"><img src="./pics/shortcut-2.png">Web Design Course</a>
+                <a href="#"><img src="./pics/shortcut-3.png">Full Stack Development</a>
+                <a href="#"><img src="./pics/shortcut-4.png">Website Experts</a>
+            </div>
+        </div>
+        <!--main content-->
+        <div class="main-content">
+            <div class="story-gallery">
+                <div class="story story1">
+                    <img src="./pics/upload.png">
+                    <p>Post Story</p>
+                </div>
+                <div class="story story2">
+                    <img src="./pics/member-1.png">
+                    <p>Esra</p>
+                </div>
+                <div class="story story3">
+                    <img src="./pics/member-2.png">
+                    <p>Murat</p>
+                </div>
+                <div class="story story4">
+                    <img src="./pics/member-3.png">
+                    <p>Merve</p>
+                </div>
+                <div class="story story5">
+                    <img src="./pics/member-4.png">
+                    <p>Edis</p>
+                </div>
+            </div>
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="./pics/profile-pic.png">
+                    <div>
+                        <p>Hakan Yalçınkaya</p>
+                        <small>Public<i class="fas fa-sort-down"></i></small>
+                    </div>
+                </div>
+
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="What's on your mind,Hakan?"></textarea>
+                    <div class="add-post-links">
+                        <a href="#"><img src="./pics/live-video.png">Live Video</a>
+                        <a href="#"><img src="./pics/photo.png">Photo/Video</a>
+                        <a href="#"><img src="./pics/feeling.png">Feeling/Activity</a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./pics/profile-pic.png">
+                        <div>
+                            <p>Hakan Yalçınkaya</p>
+                            <span>July 22 2021, 13:40 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">Subscribe <span>Marhamat's youtube channel</span>(opens soon) which is "Front end is my JOB" to watch more videos on website development and UI designs. <a href="#">#FrontEndismyJOB</a><a href="#">#YouTubeChannel</a></p>
+                <img src="./pics/feed-image-1.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./pics/like-blue.png">120</div>
+                        <div><img src="./pics/comments.png">45</div>
+                        <div><img src="./pics/share.png">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./pics/profile-pic.png"><i class="fas fa-sort-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./pics/profile-pic.png">
+                        <div>
+                            <p>Hakan Yalçınkaya</p>
+                            <span>July 22 2021, 13:40 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">Like and share this video with friends,tag <span>FrontEnd is my JOB</span> facebook page on your profile. Ask your questions in comments <a href="#">#FrontEndismyJOB</a><a href="#">#YouTubeChannel</a></p>
+                <img src="./pics/feed-image-2.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./pics/like.png">120</div>
+                        <div><img src="./pics/comments.png">45</div>
+                        <div><img src="./pics/share.png">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./pics/profile-pic.png"><i class="fas fa-sort-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./pics/profile-pic.png">
+                        <div>
+                            <p>Hakan Yalçınkaya</p>
+                            <span>July 22 2021, 13:40 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">Like and share this video with friends,tag <span>FrontEnd is my JOB</span> facebook page on your profile. Ask your questions in comments <a href="#">#FrontEndismyJOB</a><a href="#">#YouTubeChannel</a></p>
+                <img src="./pics/feed-image-3.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./pics/like.png">120</div>
+                        <div><img src="./pics/comments.png">45</div>
+                        <div><img src="./pics/share.png">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./pics/profile-pic.png"><i class="fas fa-sort-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./pics/profile-pic.png">
+                        <div>
+                            <p>Hakan Yalçınkaya</p>
+                            <span>July 22 2021, 13:40 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">Like and share this video with friends,tag <span>FrontEnd is my JOB</span> facebook page on your profile. Ask your questions in comments <a href="#">#FrontEndismyJOB</a><a href="#">#YouTubeChannel</a></p>
+                <img src="./pics/feed-image-4.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./pics/like.png">120</div>
+                        <div><img src="./pics/comments.png">45</div>
+                        <div><img src="./pics/share.png">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./pics/profile-pic.png"><i class="fas fa-sort-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./pics/profile-pic.png">
+                        <div>
+                            <p>Hakan Yalçınkaya</p>
+                            <span>July 22 2021, 13:40 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">Like and share this video with friends,tag <span>FrontEnd is my JOB</span> facebook page on your profile. Ask your questions in comments <a href="#">#FrontEndismyJOB</a><a href="#">#YouTubeChannel</a></p>
+                <img src="./pics/feed-image-5.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./pics/like.png">120</div>
+                        <div><img src="./pics/comments.png">45</div>
+                        <div><img src="./pics/share.png">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./pics/profile-pic.png"><i class="fas fa-sort-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="load-more-btn">Load More</button>
+
+        </div>
+        <!--right sidebar-->
+        <div class="right-sidebar">
+            <div class="sidebar-title">
+                <h4>Events</h4>
+                <a href="#">See All</a>
+            </div>
+            <div class="event">
+                <div class="left-event">
+                    <h3>18</h3>
+                    <span>March</span>
+                </div>
+                <div class="right-event">
+                    <h4>Social Media</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>Willson Tech Park</p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+            <div class="event">
+                <div class="left-event">
+                    <h3>22</h3>
+                    <span>June</span>
+                </div>
+                <div class="right-event">
+                    <h4>Mobile Marketing</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>Silicone Walley</p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+            <div class="sidebar-title">
+                <h4>Advertisement</h4>
+                <a href="#">Close</a>
+            </div>
+            <img src="./pics/advertisement.png" class="sidebar-ads">
+            <div class="sidebar-title">
+                <h4>Conversation</h4>
+                <a href="#">Hide Chat</a>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="./pics/member-1.png">
+                </div>
+                <p>Esra Koç</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="./pics/member-2.png">
+                </div>
+                <p>Murat Şentürk</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="./pics/member-3.png">
+                </div>
+                <p>Merve Yürek</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>Copyright 2021 - Marhamat Baghirov</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
